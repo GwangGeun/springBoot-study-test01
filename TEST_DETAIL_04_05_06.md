@@ -26,11 +26,11 @@
   3. ChainedTransactionManager 설정
 
 
-     3-(1) Transactional Propagtion.REQUIRES_NEW 와 똑같이 작동한다 ( https://jobc.tistory.com/214 ) 
+     3-(1)  ChainedTransactionManager 는 Datasource 상에서의 에러 발생 시에는 rollback 이 보장된다.
+            다만, 후순위의 logic commit 시 에러가 났을 경우에만 문제가 발생 할 수 있다.
+            현재는 Depreciated 되었기 때문에 추후 사용 목적보다는 이런게 있다는 것 정도를 알고 넘어가기 위한 테스트
+            ( JTA 를 사용하는 것을 권장 -> 2 phase commit )
 
-
-[comment]: <> (- 2-&#40;3&#41; : Multi DataSource > ChainedTransactionManager, JTA )
-  
 
  [3] 참고
  
